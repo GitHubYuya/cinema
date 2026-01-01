@@ -1,0 +1,9 @@
+import { Router } from "express";
+import { getAllMovies, getMovieById } from "./movies.controller";
+
+const router = Router();
+
+router.get("/", getAllMovies);
+router.get("/:id", getMovieById);
+
+export default router;
