@@ -1,5 +1,5 @@
-import { Request, Response } from "express";
-import { movies } from "./movies.data";
+import type { Request, Response } from "express";
+import { movies } from "./movies.data.js";
 
 export const getAllMovies = (req: Request, res: Response) => {
   res.json(movies);
