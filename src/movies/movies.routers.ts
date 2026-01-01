@@ -13,7 +13,11 @@ const router = Router();
  *     responses:
  *       200:
 <<<<<<< HEAD
+<<<<<<< HEAD
  *         description: A list of all movies.
+=======
+ *         description: A list of movies.
+>>>>>>> 29207f7dd80bbe40e3beb4d3dd9c4feee3e2e832
 =======
  *         description: A list of movies.
 >>>>>>> 29207f7dd80bbe40e3beb4d3dd9c4feee3e2e832
