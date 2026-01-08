@@ -8,19 +8,24 @@ const router = Router();
  * /movies:
  *   get:
  *     summary: Get all movies
- *     parameters:
- *       - None
  *     responses:
  *       200:
-<<<<<<< HEAD
-<<<<<<< HEAD
- *         description: A list of all movies.
-=======
- *         description: A list of movies.
->>>>>>> 29207f7dd80bbe40e3beb4d3dd9c4feee3e2e832
-=======
- *         description: A list of movies.
->>>>>>> 29207f7dd80bbe40e3beb4d3dd9c4feee3e2e832
+ *         description: List of movies
+ *         content:
+ *           application/json:
+ *             schema:
+ *               type: array
+ *               items:
+ *                 type: object
+ *                 properties:
+ *                   id:
+ *                     type: string
+ *                   title:
+ *                     type: string
+ *                   duration:
+ *                     type: number
+ *                   genre:
+ *                     type: string
  */
 router.get("/", getAllMovies);
 
@@ -28,18 +33,18 @@ router.get("/", getAllMovies);
  * @openapi
  * /movies/{id}:
  *   get:
- *     summary: Get a movie by ID
+ *     summary: Get movie by id
  *     parameters:
- *       - in: movie id
+ *       - in: path
  *         name: id
  *         required: true
  *         schema:
  *           type: string
  *     responses:
  *       200:
- *         description: A single movie.
+ *         description: Movie found
  *       404:
- *         description: Movie not found.
+ *         description: Movie not found
  */
 router.get("/:id", getMovieById);
 
